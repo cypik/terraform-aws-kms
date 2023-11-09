@@ -19,7 +19,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 ```hcl
 module "kms_key" {
-  source                  = "git::https://github.com/opz0/terraform-gcp-kms.git?ref=v1.0.0"
+  source                  = "git::https://github.com/opz0/terraform-aws-kms.git?ref=v1.0.0"
   name                    = "kms"
   environment             = "test"
   deletion_window_in_days = 7
@@ -34,7 +34,7 @@ module "kms_key" {
 ## Example: kms-key-external
 ```hcl
 module "kms_key" {
-  source                  = "git::https://github.com/opz0/terraform-gcp-kms.git?ref=v1.0.0"
+  source                  = "git::https://github.com/opz0/terraform-aws-kms.git?ref=v1.0.0"
   name                    = "kms"
   environment             = "test"
   deletion_window_in_days = 7
@@ -53,7 +53,7 @@ module "kms_key" {
 
 ```hcl
 module "kms_key" {
-  source                  = "git::https://github.com/opz0/terraform-gcp-kms.git?ref=v1.0.0"
+  source                  = "git::https://github.com/opz0/terraform-aws-kms.git?ref=v1.0.0"
   name                    = "kms"
   environment             = "test"
   deletion_window_in_days = 7
