@@ -13,7 +13,7 @@ module "kms_key" {
   multi_region            = true
   create_external_enabled = true
   valid_to                = "2023-11-21T23:20:50Z"
-  key_material_base64     = "Wblj06fduthWggmsT0cLVoIMOkeLbc2kVfMud77i/JY="
+  key_material_base64     = "WblXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   policy                  = data.aws_iam_policy_document.default.json
 }
 
@@ -30,7 +30,7 @@ data "aws_iam_policy_document" "default" {
       identifiers = [
         format(
           "arn:%s:iam::%s:root",
-          join("", data.aws_partition.current.*.partition),
+          join("", data.aws_partition.current[*].partition),
           data.aws_caller_identity.current.account_id
         )
       ]
@@ -73,7 +73,7 @@ data "aws_iam_policy_document" "default" {
       identifiers = [
         format(
           "arn:%s:iam::%s:root",
-          join("", data.aws_partition.current.*.partition),
+          join("", data.aws_partition.current[*].partition),
           data.aws_caller_identity.current.account_id
         )
       ]
@@ -104,7 +104,7 @@ data "aws_iam_policy_document" "default" {
       identifiers = [
         format(
           "arn:%s:iam::%s:root",
-          join("", data.aws_partition.current.*.partition),
+          join("", data.aws_partition.current[*].partition),
           data.aws_caller_identity.current.account_id
         )
       ]

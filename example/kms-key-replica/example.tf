@@ -12,7 +12,7 @@ module "kms_key" {
   create_replica_enabled  = true
   enabled                 = true
   multi_region            = false
-  primary_key_arn         = "arn:aws:kms:us:key/f68500b7-8bd0-41c9-9338-565db9a8a8cd"
+  primary_key_arn         = "arn:aws:kms:us:key/XXXXXXXXXXXXXXXXXXXXXX"
   policy                  = data.aws_iam_policy_document.default.json
 }
 
@@ -29,7 +29,7 @@ data "aws_iam_policy_document" "default" {
       identifiers = [
         format(
           "arn:%s:iam::%s:root",
-          join("", data.aws_partition.current.*.partition),
+          join("", data.aws_partition.current[*].partition),
           data.aws_caller_identity.current.account_id
         )
       ]
@@ -72,7 +72,7 @@ data "aws_iam_policy_document" "default" {
       identifiers = [
         format(
           "arn:%s:iam::%s:root",
-          join("", data.aws_partition.current.*.partition),
+          join("", data.aws_partition.current[*].partition),
           data.aws_caller_identity.current.account_id
         )
       ]
@@ -103,7 +103,7 @@ data "aws_iam_policy_document" "default" {
       identifiers = [
         format(
           "arn:%s:iam::%s:root",
-          join("", data.aws_partition.current.*.partition),
+          join("", data.aws_partition.current[*].partition),
           data.aws_caller_identity.current.account_id
         )
       ]
