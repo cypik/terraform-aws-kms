@@ -44,7 +44,7 @@ module "kms_key" {
   multi_region            = true
   create_external_enabled = true
   valid_to                = "2023-11-21T23:20:50Z"
-  key_material_base64     = "Wblj06fduthWggmsT0cLVoIMOkeLbc2kVfMud77i/JY="
+  key_material_base64     = "WblXXXXXXXXXXXXXXXXXXXX"
   policy                  = data.aws_iam_policy_document.default.json
 }
 ```
@@ -62,7 +62,7 @@ module "kms_key" {
   create_replica_enabled  = true
   enabled                 = true
   multi_region            = false
-  primary_key_arn         = "arn:aws:kms:us:key/f68500b7-8bd0-41c9-9338-565db9a8a8cd"
+  primary_key_arn         = "arn:aws:kms:us:key/XXXXXXXXXXXXXXXX"
   policy                  = data.aws_iam_policy_document.default.json
 }
 ```
