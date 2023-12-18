@@ -6,7 +6,7 @@ variable "name" {
 
 variable "repository" {
   type        = string
-  default     = ""
+  default     = "https://github.com/cypik/terraform-aws-s3"
   description = "Terraform current module repo"
 }
 
@@ -30,8 +30,8 @@ variable "attributes" {
 
 variable "managedby" {
   type        = string
-  default     = ""
-  description = ""
+  default     = "cypik"
+  description = "ManagedBy, eg 'cypik'."
 }
 
 variable "deletion_window_in_days" {
