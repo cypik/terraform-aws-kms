@@ -8,7 +8,7 @@ module "kms_key" {
   environment             = "test"
   deletion_window_in_days = 7
   alias                   = "alias/external_key"
-  kms_key_enabled         = false
+  kms_key_enabled         = true
   enabled                 = true
   multi_region            = true
   create_external_enabled = true
