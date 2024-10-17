@@ -10,7 +10,6 @@ module "kms_key" {
   alias                   = "alias/external_key"
   kms_key_enabled         = true
   enabled                 = true
-  multi_region            = true
   create_external_enabled = true
   valid_to                = "2023-11-21T23:20:50Z"
   key_material_base64     = "WblXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"

@@ -11,7 +11,6 @@ module "kms_key" {
   kms_key_enabled         = false
   create_replica_enabled  = true
   enabled                 = true
-  multi_region            = true
   primary_key_arn         = "arn:aws:kms:us-east-1::key/mrkxxxxxxxxxxxxxxxxxxx"
   policy                  = data.aws_iam_policy_document.default.json
 }
