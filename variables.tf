@@ -30,8 +30,8 @@ variable "attributes" {
 
 variable "managedby" {
   type        = string
-  default     = "cypik"
-  description = "ManagedBy, eg 'cypik'."
+  default     = "info@cypik.com"
+  description = "ManagedBy, eg 'info@cypik.com'"
 }
 
 variable "deletion_window_in_days" {
@@ -92,7 +92,7 @@ variable "enable_key_rotation" {
 
 variable "multi_region" {
   type        = bool
-  default     = true
+  default     = false
   description = "Indicates whether the KMS key is a multi-Region (true) or regional (false) key."
 }
 

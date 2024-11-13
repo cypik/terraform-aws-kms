@@ -8,9 +8,8 @@ module "kms_key" {
   environment             = "test"
   deletion_window_in_days = 7
   alias                   = "alias/external_key"
-  kms_key_enabled         = false
+  kms_key_enabled         = true
   enabled                 = true
-  multi_region            = true
   create_external_enabled = true
   valid_to                = "2023-11-21T23:20:50Z"
   key_material_base64     = "WblXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"

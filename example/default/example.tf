@@ -10,7 +10,6 @@ module "kms_key" {
   deletion_window_in_days = 7
   alias                   = "alias/cloudtrail_Name"
   kms_key_enabled         = true
-  multi_region            = true
   valid_to                = "2023-11-21T23:20:50Z"
   policy                  = data.aws_iam_policy_document.default.json
 }
