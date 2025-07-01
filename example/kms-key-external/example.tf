@@ -11,8 +11,8 @@ module "kms_key" {
   kms_key_enabled         = true
   enabled                 = true
   create_external_enabled = true
-  valid_to                = "2023-11-21T23:20:50Z"
-  key_material_base64     = "WblXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  valid_to                = "2026-11-21T23:20:50Z"
+  key_material_base64     = "JuwJPSlXwnD+xxxxxxxxxxxxxxxxx="
   policy                  = data.aws_iam_policy_document.default.json
 }
 
