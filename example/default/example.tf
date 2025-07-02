@@ -1,6 +1,5 @@
 provider "aws" {
   region = "eu-west-1"
-
 }
 
 module "kms_key" {
